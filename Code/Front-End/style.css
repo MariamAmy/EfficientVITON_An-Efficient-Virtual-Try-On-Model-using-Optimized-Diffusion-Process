@@ -1,0 +1,698 @@
+/* style.css */
+
+:root {
+    /* Define variables for colors, fonts, etc. for better maintainability */
+    --primary-color: #;  /* Example color */
+    --secondary-color: #;   /* Example color */
+    --font-family: sans-serif; /* Example font */
+}
+
+
+body {
+    font-family: var(--font-family);
+    margin: 0;  /* Reset default margins */
+    opacity: 0.5;
+    transition: opacity 3s;
+}
+
+
+.container {
+  
+  margin: 0 auto; /* Center the container */
+  padding: 20px;
+  display: flex;
+  justify-content: space-around;
+}
+.containerMain {
+    max-width: 1200px;
+    margin: 0 auto; /* Center the container */
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+  }
+
+
+  .containerHeader {
+    width: 100%;
+    padding: 5px 30px; /* Adjust padding as needed */
+    box-sizing: border-box;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li:first-child {
+    justify-content: flex-start;
+}
+
+nav ul li:last-child {
+    justify-content: flex-end;
+}
+
+.left-logo img {
+    height: 50px; /* Adjust the height as needed */
+}
+
+.home a {
+    text-decoration: none;
+    color: #79BCCF; /* Adjust the color as needed */
+    font-size: 18px; /* Adjust the font size as needed */
+}
+
+.SPONSORED{
+    margin-bottom: 10px;
+}
+
+.right-sponsor {
+    margin-top: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align content to the left */
+}
+
+.sponsor-text {
+    font-size: 16px; /* Adjust the font size as needed */
+    margin-bottom: 10px; /* Space between "SPONSORED BY" and the logo */
+    font-family: Arial, sans-serif;
+    font-weight: 530;
+    
+}
+
+.sponsor-content {
+    display: flex;
+    align-items: center; /* Align logo and text vertically */
+}
+
+.iono{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start; /* Align content to the left */
+    padding: 0px 0px;
+}
+
+.top-iono-logo {
+    height: 50px; /* Adjust the height as needed */
+    margin-right: -10 px; /* Space between logo and text */
+    margin-top: -18px;
+    animation: spin2D 3s linear infinite;
+}
+@keyframes spin2D {
+    from { 
+        transform: rotateY(0deg); 
+    }
+    to { 
+        transform: rotateY(360deg);
+    }
+}
+
+.iono-text {
+    font-size: 16px; /* Adjust the font size as needed */
+    margin-right: 5px; /* Space between "IONO" and "TECHNOLOGY" */
+    font-family: Arial, sans-serif;
+    color: #5CA75C;
+}
+
+.technology-text1 {
+    font-size: 16px; /* Adjust the font size as needed */
+    margin-right: 5px; /* Space between "IONO" and "TECHNOLOGY" */
+    font-family: Arial, sans-serif;
+}
+
+header {
+   /* Style header, logo, navigation */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6px 0;
+}
+
+.logo { /* Style the logo */
+    font-weight: bold;
+    font-size: 2em;
+}
+
+.logo sup {  /* Styles for the superscript 2 */
+    font-size: 0.6em;
+    vertical-align: super;
+}
+
+
+nav ul { /* Style navigation */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex; /* Make list items horizontal */
+
+}
+
+nav li {
+    margin-left: 20px;
+}
+
+nav a {
+    text-decoration: none; /* Remove underlines from links */
+    color: #79BCCF; /* Example link color */
+    font-weight: 800;
+    font-size: 16px;
+}
+
+
+.sponsored {
+    /* Style sponsored by section */
+    text-align: right;
+}
+
+.image-container {
+  position: relative;
+  width: 844px; /* Adjust to your desired size */
+  height: 200px; /* Set the height explicitly to match the image size */
+  overflow: hidden;
+  top: 400px;
+  left: -20px;
+  z-index: 15;
+}
+
+.image-container-try {
+    position: relative;
+    width: 600px; /* Adjust to your desired size */
+    height: 160px; /* Set the height explicitly to match the image size */
+    overflow: hidden;
+    top: px;
+    z-index: 15;
+    margin: 0 auto;
+    margin-top: 25px;
+}
+    
+  
+.image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%; /* Ensure the image fills the container */
+  height: 100%; /* Scale the image to match the container */
+  opacity: 0;
+  transition: opacity 3s cubic-bezier(0.4, 0, 0.2, 1);;
+}
+
+.image2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* Ensure the image fills the container */
+    height: 100%; /* Scale the image to match the container */
+    opacity: 0;
+    transition: opacity 3s cubic-bezier(0.4, 0, 0.2, 1);;
+}
+
+.image2.active {
+    opacity: 1; /* Only the active image is visible */
+  }
+
+  
+.image.active {
+  opacity: 1; /* Only the active image is visible */
+}
+
+.hero {
+    /* Styles for the main hero section */
+    position: relative; 
+    width: auto;
+    height: 85.5vh; /* Full viewport height */
+    padding: 50px 0;  
+    text-align: center;
+    animation: color-change-3x 6s linear infinite alternate both;
+    /* background: linear-gradient(90deg,rgba(195, 227, 250, 1) 0% ,rgba(239, 175, 188, 1)100%); */
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+}
+.heroTry {
+    position: relative; 
+    width: auto;
+    height: 99.5vh; /* Full viewport height */
+    padding: 15px 0;  
+    margin-top: -6px;
+    text-align: center;
+    animation: color-change-3x 6s linear infinite alternate both;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+}
+
+@keyframes color-change-3x {
+    0%   {background: rgba(195, 227, 250, 1);}
+    50%  {background: rgba(239, 175, 188, 1);}
+    100% {background: rgba(245, 51, 91, 1);}
+}
+
+#rectangle{
+    height:280.48px;
+    width:554.72px;
+    background:#EFAFBC;
+    position: absolute;
+    right: 0px;    
+    top: 100px;
+    z-index: 5;
+}
+
+.lines img{
+    height:760.01px;
+    width:760.27px;
+    position: absolute;
+    left: 260px;   
+    rotate: -3.69deg; 
+    top: -50px;
+    z-index: 5;
+}
+
+.hero-arrow{
+    height:290.48px;
+    width:554.72px;
+    position: absolute;
+    right: 0px;    
+    top: -30px;
+    z-index: 5;
+}
+
+.hero-content {
+   justify-content: left;
+   text-align: left;
+   position: absolute;
+   left: 76px;
+   top: 80px;
+   z-index: 20;
+}
+
+.hero-content h2 {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    color: #ffffff;
+    letter-spacing: 5px;  
+}
+
+.body1 {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 64px;
+    font-weight: 100;
+    color: #444444;
+    letter-spacing: 1px;
+    margin-top: 3px;  
+    margin-bottom: 10px;
+}
+
+.body2 {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 64px;
+    font-weight: 600;
+    color: #444444;
+    letter-spacing: 1px;  
+    margin-top: 3px;  
+    margin-bottom: 10px;
+}
+
+.hero-content p {
+    font-size: 16px;
+    font-weight: 100;
+    color: #656565;
+    letter-spacing: 1px;
+    margin-bottom: 30px;
+}
+
+.hero-image {
+    /* Hero section image styles */
+    margin-top: -70px; /* Example margin */
+    text-align: right;
+    width: 556.75px;
+    height: 552.45px;
+    z-index: 10; 
+}
+
+
+.hero-image img {
+    width: 500.75px;
+    height: 500.45px;
+    display: block; /* Prevents extra space below image */
+    position: absolute;
+    right: 185px;
+
+}
+
+
+.curved-lines {
+    /* Create the curved lines with SVG or an image */
+    position: absolute;
+
+
+}
+
+/* Steps section styles */
+.steps {
+    display: flex; /* Arrange steps horizontally */
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.step {
+    width: 100px; /* Adjust as needed */
+    height: 100px; /* Adjust as needed */
+    border-radius: 50%; /* Make circular */
+    background-color: lightblue; /* Example color */
+    margin: 0 10px; /* Spacing between steps */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+.step img { /* Style images within steps */
+    width: 50px;
+    height: 50px;
+
+}
+
+.step p {
+    font-size: 0.8em; /* smaller font size for step text */
+    margin-top: 5px;
+
+}
+
+.try-on-button {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    display: inline-block; 
+    padding: 7px 30px;  
+    border: none;       
+    border-radius: 25px; 
+    background-color: white; 
+    color: #333;         
+    font-size: 16px;    
+    font-weight: 600;   
+    cursor: pointer;      
+    text-decoration: none; /* Remove underline if it's a link */
+    transition: background-color 0.3s ease; /* Smooth transition on hover */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Subtle box shadow */
+    line-height: 21px;
+    letter-spacing: 0.5px;  
+    z-index: 20;
+}
+
+
+.try-on-button:hover {
+    background-color: #f0f0f0; /* Lighter background on hover */
+}
+
+
+/* Style the arrow */
+.try-on-button::after {
+    content: ">";      /* The arrow character */
+    margin-left: 10px;   /* Space between text and arrow */
+    color: #87CEEB;     /* Light blue color for arrow */
+}
+
+.rounded-window {
+    width: 90%; /* Adjust the width as needed */
+    height: 650px; /* Adjust the height as needed */
+    margin: 1px auto; /* Center the window */
+    border-radius: 15px; /* Rounded corners */
+    background-color: #f0f0f0; /* Light gray background */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    overflow: hidden; /* Ensure content stays inside the rounded corners */
+    padding: 20px; /* Add some padding inside the window */
+    text-align: center; /* Center-align content inside the window */
+}
+
+.rounded-window h2 {
+    margin: 0;
+    color: #333;
+    text-align: left;
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+
+.upload-area {
+    width: 100%; /* Adjust size as needed */
+    height: 400px; /* Adjust height as needed */
+    margin: 10px auto;
+    background-color: #fff;
+    border: 2px dashed #ccc;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #333;
+    font-size: 16px;
+    position: relative;
+}
+
+.upload-area.dragover {
+    border-color: #79bccf;
+    background-color: #f0f8ff;
+}
+
+.upload-area img {
+    width: 40px;
+    margin-bottom: 10px;
+}
+
+.upload-area a {
+    color: #1849D6;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.upload-area a:hover {
+    text-decoration: underline;
+}
+
+.upload-area small {
+    color: #888;
+    margin-top: 5px;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+
+/* Overall layout */
+.content-wrapper {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px; /* Space between sections */
+    padding: 20px;
+    /* border: 2px dashed #d6cfea; Border similar to the example */
+    height: 400px; /* Full viewport height */
+    overflow: hidden; /* Prevent horizontal scroll */
+}
+
+/* Uploaded image section */
+.uploaded-image-container {
+    position: relative;
+    flex: 0.25; 
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.uploaded-image-container img {
+    height: 320px; /* Adjust image height */;
+    width: auto; /* Maintain aspect ratio */
+    object-fit: contain; /* Fit within container */
+    border-radius: 10px;
+    margin-bottom: 10px; /* Space between image and caption */
+    transition: all 0.3s ease;
+}
+
+/* Uploaded image section */
+.uploadedd-image-container {
+    position: relative;
+    flex: 0.25; 
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.uploadedd-image-container img {
+    height: 420px; /* Adjust image height */;
+    width: auto; /* Maintain aspect ratio */
+    object-fit: contain; /* Fit within container */
+    border-radius: 10px;
+    margin-bottom: 10px; /* Space between image and caption */
+    transition: all 0.3s ease;
+}
+
+.image-caption {
+    font-size: 14px;
+    color: #666;
+    margin-top: 5px;
+}
+
+/* Vertical line */
+.vertical-line {
+    width: 2px;
+    background-color: #ccc;
+    height: 100%; /* Stretch full height */
+}
+
+/* Clothes section */
+.clothes-section {
+    flex: 0.75; /* Take 70% of the width */
+    display: flex;
+    flex-direction: column;
+}
+
+.clothes-section h2 {
+    font-size: 18px;
+    font-weight: normal;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* Clothes container for scrolling */
+.clothes-container {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 images per row */
+    gap: 15px; /* Space between images */
+    overflow-y: auto; /* Enable vertical scrolling */
+    height: 320px; /* Adjust height for scrolling */
+    padding: 5px;
+    scroll-behavior: smooth;
+}
+    
+/* Styling the scrollbar */
+.clothes-container::-webkit-scrollbar {
+    width: 8px; /* Width of the vertical scrollbar */
+    background-color: #fdfdfd; /* Background color of the scrollbar track */
+}
+
+.clothes-container::-webkit-scrollbar-thumb {
+    background-color: #757171; /* Color of the scrollbar thumb */
+    border-radius: 10px; /* Rounded corners for the scrollbar thumb */
+}
+
+.clothes-container::-webkit-scrollbar-thumb:hover {
+    background-color: #555; /* Darker color on hover */
+}
+
+.clothes-container img {
+    width: 100%; /* Full width of grid cell */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.clothes-container img:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+.uploaded-image-container2 {
+    flex: 0.2; 
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+
+/* Centered container for expanded view */
+.centered-image {
+    max-width: 100%; /* Ensure it fits within the container */
+    max-height: 100%;
+    object-fit: contain;
+    border-radius: 10px;
+}
+.header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px 5px; /* Adjust spacing as needed */
+}
+
+.exit-icon {
+    color: #000000; /* Red color for the X icon */
+    font-size: 20px; /* Adjust size */
+    font-weight: lighter;
+    text-decoration: none;
+    transition: color 0.3s;
+    cursor: pointer;
+}
+
+.exit-icon:hover {
+    color: #65909f; /* Darker red on hover */
+}
+
+.exit-icon svg {
+    fill: #ff4d4d; /* Apply color for SVG icon */
+    width: 24px; /* Adjust size */
+    height: 24px;
+}
+
+.cloloader-overlay {
+    position: absolute;
+    top: 0;
+    left: 350px;
+    width: 75%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+    display: none; /* Hidden by default */
+    justify-content: center;
+    align-items: center;
+  }
+.cloloader {
+    width: 60px;
+    height: 60px;
+    border: 10px solid #EFAFBC;
+    border-bottom-color: #F5335B;
+    border-radius: 50%;
+    box-sizing: border-box;
+    animation: rotation 2s linear infinite;
+    }
+
+    @keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+} 
+
+
+.loader-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+    display: flex; /* Hidden by default */
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .loader {
+    border: 4px solid #f3f3f3; /* Light grey */
+    border-top: 4px solid #3498db; /* Blue */
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 2s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }

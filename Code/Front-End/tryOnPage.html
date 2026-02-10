@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="view-transition" content="same-origin"> 
+    <title>Clothes - Virtual Try-On</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: var(--font-family);
+            margin: 0;  /* Reset default margins */
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="containerHeader">
+            <nav>
+                <ul>
+                    <li><div class="left-logo">
+                        <img src="imgs/2-removebg-preview 1.jpg" alt="clothes">
+                    </div></li>
+                    <li>
+                        <div class = "home"> 
+                            <a href="main.html">HOME</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="right-sponsor">
+                            <div class="SPONSORED"><span class="sponsor-text">SPONSORED BY</span></div>
+                            <div class="iono">
+                            <img src="imgs/IONO GIF 1.png" alt="IONO" class="top-iono-logo">
+                            <span class="iono-text">IONO</span>
+                            <span class="technology-text1">TECHNOLOGY</span>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="heroTry">
+            <div class="container">
+                <div class="rounded-window" id = "rounded-window">
+                    <div class="header-row">
+                        <h2>
+                            <span style="color: #79BCCF;">TRY</span> VIRTUAL TRY ON
+                        </h2>
+                        <a href="main.html" class="exit-icon" aria-label="Exit">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" class="thin-x">
+                                <line x1="6" y1="6" x2="18" y2="18" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                                <line x1="6" y1="18" x2="18" y2="6" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                            </svg>
+                        </a>                        
+                    </div>
+                    <div class="upload-area" id="upload-area">
+                        <img src="imgs/cloud-upload.png" alt="Upload Icon" class="upload-icon">
+                        <p>Drag your file(s) or <a href="#" id="browse-link">browse</a></p>
+                        <small>Max 10 MB files are allowed</small>
+                        <input type="file" id="file-input" accept="image/*">
+                    </div>
+                    <div class="image-container-try">
+                        <img id="image1" class="image2 active" src="imgs/Property1.png" alt="Rotating Image 1">
+                        <img id="image2" class="image2" src="imgs/Property2.png" alt="Rotating Image 2">
+                        <img id="image3" class="image2" src="imgs/Property3.png" alt="Rotating Image 3">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+<script src="script.js"></script>
+</html>

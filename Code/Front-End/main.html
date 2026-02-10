@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="view-transition" content="same-origin"> 
+    <title>Clothes - Virtual Try-On</title>
+    <link rel="stylesheet" href="style.css">  <!-- Link to your CSS file -->
+</head>
+<body>
+    <header>
+        <div class="containerHeader">
+            <nav>
+                <ul>
+                    <li><div class="left-logo">
+                        <img src="imgs/2-removebg-preview 1.jpg" alt="clothes">
+                    </div></li>
+                    <li>
+                        <div class = "home"> 
+                            <a href="#">HOME</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="right-sponsor">
+                            <div class="SPONSORED"><span class="sponsor-text">SPONSORED BY</span></div>
+                            <div class="iono">
+                            <img src="imgs/IONO GIF 1.png" alt="IONO" class="top-iono-logo">
+                            <span class="iono-text">IONO</span>
+                            <span class="technology-text1">TECHNOLOGY</span>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="hero">
+            <div class="containerMain">
+                <div class="hero-content">
+                    <h2>OUTFIT OF THE DAY</h2>
+                    <h1 class="body1">ALL YOUR</h1>
+                    <h1 class="body2">STYLES ARE HERE</h1>
+                    <p>"NOW, YOU CAN SHOP IN OUR ONLINE STORE AND <br> <b>VIRTUALLY TRY ON </b> CLOTHES USING ARTIFICIAL <br> INTELLIGENCE."</p>
+                    <a href='./tryOnPage.html' class="try-on-button">
+                        <span style="color: #79BCCF;">TRY</span> VIRTUAL TRY ON
+                    </a>                    
+                </div>
+                <div id="rectangle"></div>
+                <div class="hero-arrow">
+                    <img src="imgs/chevrons-right.png" alt="hero-arrow"> 
+                </div>
+                <div class="hero-image">
+                    <img src="imgs/Jaket.png" alt="Jacket">  
+                </div>
+                <div class="lines">
+                    <img src="imgs/Vector 1.png" alt="lines">  
+                </div>
+                <div class="image-container">
+                    <img id="image1" class="image active" src="imgs/Property1.png" alt="Rotating Image 1">
+                    <img id="image2" class="image" src="imgs/Property2.png" alt="Rotating Image 2">
+                    <img id="image3" class="image" src="imgs/Property3.png" alt="Rotating Image 3">
+                </div>
+            </div>
+        </section>
+    </main>  
+</body>
+<script src="script.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function(event) {
+                document.querySelector('body').style.opacity = 1
+            })
+</script>
+</html>
